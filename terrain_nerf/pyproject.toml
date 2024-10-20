@@ -1,0 +1,13 @@
+[project]
+name = "terrain-nerf"
+description = "Terrain NeRF"
+version = "0.1.0"
+
+dependencies = ["nerfstudio >= 1.1.0"] 
+
+[tool.setuptools.packages.find]
+include = ["terrain_nerf*"]
+
+# register the entry point of your new method here:
+[project.entry-points.'nerfstudio.method_configs']
+terrain-nerf = 'terrain_nerf.config:terrain_nerf'
